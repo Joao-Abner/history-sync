@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -9,13 +10,11 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    RouterOutlet,
-    MenuComponent,
-    FooterComponent,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
