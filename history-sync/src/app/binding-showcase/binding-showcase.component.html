@@ -1,1 +1,5 @@
-<p>binding-showcase works!</p>
+<h1>{{ title }}</h1> <!-- Interpolation -->
+<img [src]="imageUrl" alt="Angular Logo"> <!-- Property Binding -->
+<button [disabled]="isButtonDisabled" (click)="toggleButton()">Toggle Button</button>
+<p *ngIf="isButtonDisabled">The button is disabled.</p>
+<p *ngIf="!isButtonDisabled">The button is enabled.</p>

@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BindingShowcaseComponent {
   title: string = 'Data Binding in Angular';
-  imageUrl: string = 'https://angular.io/assets/images/logos/angular/angular.png'; isButtonDisabled: boolean = true;
+  imageUrl: string = 'https://angular.io/assets/images/logos/angular/angular.png';
+  isButtonDisabled: boolean = false;
 
   toggleButton() {
     this.isButtonDisabled = !this.isButtonDisabled;
