@@ -8,6 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BindingShowcaseComponent } from './binding-showcase/binding-showcase.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,14 @@ import { BindingShowcaseComponent } from './binding-showcase/binding-showcase.co
     FooterComponent,
     HeaderComponent,
     BindingShowcaseComponent,
+    SobreComponent,
+    ContatoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
