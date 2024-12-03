@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BindingShowcaseComponent } from './binding-showcase/binding-showcase.component';
 import { AboutComponent } from './about/about.component';
-import { ContatoComponent } from './contato/contato.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ContatoComponent } from './contato/contato.component';
     HeaderComponent,
     BindingShowcaseComponent,
     AboutComponent,
-    ContatoComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
