@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'history-sync';
   name: string = '';
+
+  parentData = 'Data from parent';
+  childData: string = '';
+
+  receiveData(data: string) {
+    this.childData = data;
+  }
 }

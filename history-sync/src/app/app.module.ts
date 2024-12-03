@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { BindingShowcaseComponent } from './binding-showcase/binding-showcase.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
     BindingShowcaseComponent,
     AboutComponent,
     ContactComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
