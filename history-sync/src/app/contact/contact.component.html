@@ -1,2 +1,25 @@
 <h2>Contato</h2>
 <p>contato works!</p>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" ngModel required pattern="^[a-zA-ZÀ-ÿ\s]+$">
+    <div *ngIf="contactForm.submitted && contactForm.controls['name']?.errors?.['required']">
+      <p>Nome é obrigatório!</p>
+    </div>
+    <div *ngIf="contactForm.submitted && contactForm.controls['name']?.errors?.['pattern']">
+      <p>Nome deve conter apenas letras!</p>
+    </div>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+    <div *ngIf="contactForm.submitted && contactForm.controls['email']?.errors?.['required']">
+      Email é obrigatório.
+    </div>
+    <div *ngIf="contactForm.submitted && contactForm.controls['email'].errors?.['email']">
+      Email inválido.
+    </div>
+  </div>
+  <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+</form>
