@@ -1,2 +1,7 @@
-<app-binding-showcase></app-binding-showcase>
-<p>menu works!!</p>
+<h1>{{ title }}</h1>
+<div>
+  <h2>Cadastre uma Entidade:</h2>
+  <input [(ngModel)]="name" placeholder="Enter name">
+  <button (click)="addEntity()">Add Entity</button>
+  <p *ngIf="confirmationMessage">{{ confirmationMessage }}</p>
+</div>

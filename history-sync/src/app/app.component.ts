@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,4 @@ export class AppComponent {
   parentData = 'Data from parent';
   childData: string = '';
 
-  receiveData(data: string) {
-    this.childData = data;
-  }
 }
