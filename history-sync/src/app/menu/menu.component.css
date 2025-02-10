@@ -1,46 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-nav {
-  background-color: #333;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 5px;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-  color: #fff;
-}
-
 /* Estilo para o contêiner do formulário */
 div {
   max-width: 400px;
   margin: 0 auto;
-  margin-top: 7rem;
+  margin-bottom: 0.7rem;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
@@ -48,16 +10,10 @@ div {
 }
 
 /* Estilo para os títulos */
+h1,
 h2 {
   text-align: center;
   color: #333;
-}
-
-/* Estilo para os rótulos */
-label {
-  margin-bottom: .5em;
-  color: #333;
-  display: block;
 }
 
 /* Estilo para os campos de entrada */
@@ -72,8 +28,10 @@ input {
 }
 
 /* Estilo para o botão */
-button {
+button,
+.show_entities_button {
   padding: 0.7em;
+  margin-top: 0.7rem;
   color: #fff;
   background-color: #007BFF;
   border: none;

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,25 +8,13 @@ import { Injectable } from '@angular/core';
 export class ApiService {
   private apiUrl = 'http://localhost:3000'; // URL do JSON Server
 
-  async getData(endpoint: string): Promise<any> {
-    const response = await fetch(`${this.apiUrl}/${endpoint}`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
+  constructor(private http: HttpClient) { }
+
+  getData(endpoint: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${endpoint}`);
   }
 
-  async postData(endpoint: string, data: any): Promise<any> {
-    const response = await fetch(`${this.apiUrl}/${endpoint}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
+  postData(endpoint: string, data: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${endpoint}`, data);
   }
 }

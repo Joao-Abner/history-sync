@@ -1,7 +1,16 @@
 <h1>{{ title }}</h1>
 <div>
   <h2>Cadastre uma Entidade:</h2>
-  <input [(ngModel)]="name" placeholder="Enter name">
-  <button (click)="addEntity()">Add Entity</button>
+  <input [(ngModel)]="name" placeholder="Nome da Entidade">
+  <button (click)="addEntity()" [disabled]="!name.trim()">Adicionar</button>
   <p *ngIf="confirmationMessage">{{ confirmationMessage }}</p>
+  <button class="show_entities_button" (click)="showData = !showData">Mostrar Entidades Cadastradas</button>
 </div>
+
+<div *ngIf="showData">
+  <h2>Entidades Cadastradas:</h2>
+  <ul>
+    <li *ngFor="let item of data">
+      {{ item.name | uppercase }}
+    </li>
+  </ul>

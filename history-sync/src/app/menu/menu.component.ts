@@ -10,28 +10,45 @@ export class MenuComponent {
   title: string = 'Menu';
   name: string = '';
   confirmationMessage: string = '';
+  data: any[] = []; // Array para armazenar os dados da API
+  showData: boolean = true; // Flag para exibir ou não os dados da API
 
   constructor(private apiService: ApiService) { }
 
-  async ngOnInit() {
-    try {
-      const data = await this.apiService.getData('entities');
-      console.log('Data from API:', data);
-    } catch (error) {
-      console.error('Erros fetching data:', error);
-    }
+  ngOnInit() {
+    this.getData()
   }
 
-  async addEntity() {
+  getData() {
+    this.apiService.getData('entities').subscribe(
+      (response) => {
+        this.data = response;
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
+
+  addEntity() {
+    if (!this.name) {
+      this.confirmationMessage = 'Por favor, preencha o campo nome!';
+      return;
+    }
+
+
     const newEntity = { name: this.name };
-    try {
-      const result = await this.apiService.postData('entities', newEntity);
-      console.log('Entity added:', result);
-      this.confirmationMessage = 'Entidade adicionada com sucesso!';
-    } catch (error) {
-      console.error('Error adding entity:', error);
-      this.confirmationMessage = 'Erro ao adicionar entidade.';
-    }
+    this.apiService.postData('entities', newEntity).subscribe(
+      (result) => {
+        console.log('Entity added:', result);
+        this.confirmationMessage = 'Entidade adicionada com sucesso!';
+        this.name = '';
+        this.getData();
+      },
+      (error) => {
+        console.error('Error adding entity:', error);
+        this.confirmationMessage = 'Erro ao adicionar entidade!';
+      }
+    );
   }
-
 }
