@@ -1,37 +1,17 @@
-* {
-  margin: 0;
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
   padding: 0;
-  box-sizing: border-box;
+  outline: none;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.bi {
+  color: var(--klistapp-nero);
+  background-color: transparent;
 }
 
-nav {
-  background-color: #333;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 5px;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-  color: #fff;
+.menu-icon {
+  border: none;
+  cursor: pointer;
 }
