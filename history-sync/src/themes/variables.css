@@ -1,4 +1,3 @@
-/* Figma Styles */
 :root {
   /* Colors */
   --klistapp-nero: #ffffff;
@@ -116,6 +115,4 @@
   --klistapp-segoe-ui-regular-16-line-height: 17px;
   --klistapp-segoe-ui-regular-16-font-weight: 400;
   --klistapp-segoe-ui-regular-16-font-style: normal;
-
-  /* Effects */
 }
