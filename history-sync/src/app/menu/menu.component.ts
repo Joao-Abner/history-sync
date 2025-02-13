@@ -40,7 +40,7 @@ export class MenuComponent implements OnInit {
     }
 
     // Gerencia a classe ativa ao botão clicado
-    const buttons = document.querySelectorAll(".new-event-button,.star-button,.menu-all-button");
+    const buttons = document.querySelectorAll(".new-event-button,.search-button");
     buttons.forEach(button => {
       button.addEventListener("click", function () {
         buttons.forEach(btn => btn.classList.remove("active"));
@@ -55,6 +55,18 @@ export class MenuComponent implements OnInit {
         const novoEventoModal = document.getElementById("novoEventoModal");
         if (novoEventoModal) {
           const modal = new bootstrap.Modal(novoEventoModal);
+          modal.show();
+        }
+      });
+    }
+
+    // Função para abrir o modal "Buscar Evento"
+    const buttonSearchEvents = document.getElementById("search-events");
+    if (buttonSearchEvents) {
+      buttonSearchEvents.addEventListener("click", () => {
+        const buscarEventoModal = document.getElementById("buscarEventoModal");
+        if (buscarEventoModal) {
+          const modal = new bootstrap.Modal(buscarEventoModal);
           modal.show();
         }
       });
