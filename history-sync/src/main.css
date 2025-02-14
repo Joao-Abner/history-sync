@@ -5,23 +5,23 @@
 /* Estilos para o contêiner principal */
 .main-content {
   display: flex;
+  margin-top: 5rem;
 }
 
 app-header {
-  flex: 0 0 100%;
-  /* Largura fixa para o cabeçalho */
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 /* Estilos para o menu lateral */
 app-menu {
-  flex: 0 0 250px;
-  /* Largura fixa para o menu lateral */
-  height: 100vh;
-  /* Altura total da viewport */
+  flex: 0 0 15.625rem;
+  height: calc(100vh - 5rem);
+  /* Altura total da viewport menos a altura do cabeçalho */
   position: fixed;
-  /* Fixa o menu lateral */
+  top: 5rem;
+  z-index: 999;
 }
 
 /* Estilos para o conteúdo principal */
@@ -63,6 +63,16 @@ app-menu {
 /* Para telas com largura máxima de 768px */
 @media screen and (max-width: 768px) {
 
+  app-menu {
+    width: 200px;
+    /* Ajusta a largura do menu lateral para telas menores */
+  }
+
+  .content {
+    margin-left: 200px;
+    /* Ajusta o espaço para o menu lateral em telas menores */
+  }
+
   /* Ajusta o layout da barra de navegação e posiciona o logo */
   .navbar {
     flex-wrap: wrap;
@@ -92,7 +102,7 @@ app-menu {
   }
 
   .menu-lateral-esquerdo {
-    width: 35%;
+    width: 45%;
     /* Reduz a largura do menu lateral esquerdo */
     height: 100vh;
     /* Mantém a altura total da viewport */
