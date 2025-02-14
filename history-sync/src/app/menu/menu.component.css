@@ -1,8 +1,6 @@
 .menu-lateral-esquerdo {
   width: 15.625rem;
-  /* Ocupa toda a largura de 16% da tela */
-  height: 100vh;
-  /* Altura total da viewport */
+  height: 95%;
   position: fixed;
   display: flex;
   flex-direction: column;

@@ -84,6 +84,7 @@ app-menu {
 
   .content {
     margin-left: 12.5rem;
+    min-height: calc(100vh - -3rem);
     /* Ajusta o espaço para o menu lateral em telas menores */
   }
 
