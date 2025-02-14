@@ -1,5 +1,37 @@
 @import 'themes/variables.css';
 
+/* Estilos globais para o layout do aplicativo */
+
+/* Estilos para o contêiner principal */
+.main-content {
+  display: flex;
+}
+
+/* Estilos para o menu lateral */
+app-menu {
+  flex: 0 0 250px;
+  /* Largura fixa para o menu lateral */
+  height: 100vh;
+  /* Altura total da viewport */
+  position: fixed;
+  /* Fixa o menu lateral */
+  z-index: 1000;
+  /* Garante que o menu lateral fique acima do conteúdo */
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  flex: 1;
+  margin-left: 15.625rem;
+  /* Espaço para o menu lateral */
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Garante que o conteúdo ocupe a altura total da viewport */
+}
+
 /* Para telas com largura mínima de 900px */
 @media screen and (min-width: 900px) {
 

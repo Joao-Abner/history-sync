@@ -2,18 +2,24 @@
 
 /* Container principal */
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 37.5rem;
+  margin-left: 28rem;
+  padding: 1.25rem;
   background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Garante que o contêiner ocupe a altura total da viewport */
 }
 
 /* Título da página */
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: #333;
 }
 
@@ -21,32 +27,35 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  /* Garante que o formulário ocupe a largura total do contêiner */
 }
 
 /* Estilos para os campos do formulário */
 .form-control {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  margin-bottom: 0.9375rem;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+
 }
 
 /* Estilos para os labels */
 .form-label {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-weight: bold;
   color: #555;
 }
 
 /* Estilos para o botão de salvar */
 .save-button {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 0.25rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -58,22 +67,23 @@ form {
 /* Estilos para mensagens de erro */
 .error-message {
   color: red;
-  font-size: 14px;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  font-size: 0.875rem;
+  margin-top: -0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
+
   .container {
-    padding: 15px;
+    padding: 0.9375rem;
   }
 
   .form-control {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .save-button {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
