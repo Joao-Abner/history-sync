@@ -1,15 +1,17 @@
 <!-- menu lateral esquerdo -->
-<div class="menu-lateral-esquerdo">
+<div class="menu-lateral-esquerdo" #menuLateral>
   <div class="menu-principal">
     <!-- Navegação -->
     <nav class="navegacao">
       <ul id="ul-navegacao">
-        <li><button type="button" class="btn new-event-button"><i class="bi bi-plus-square-fill"></i>
-            Novo
-            Evento</button></li>
         <li>
-          <button type="button" class="btn search-events" id="search-events">
-            <i class="bi bi-search"></i> Buscar Evento
+          <button type="button" class="btn new-event-button" (click)="openNewEventPage()">
+            <i class="bi bi-plus-square-fill"></i> New Event
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn search-events" (click)="openSearchEventPage()">
+            <i class="bi bi-search"></i> Search Event
           </button>
         </li>
       </ul>

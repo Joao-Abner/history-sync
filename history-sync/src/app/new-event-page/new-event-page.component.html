@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>New Event</h2>
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="eventTitle" class="form-label">Title:</label>
+      <input type="text" class="form-control" id="eventTitle" formControlName="title"
+        placeholder="Enter the event title here...">
+    </div>
+    <div class="mb-3">
+      <label for="eventYear" class="form-label">Year:</label>
+      <input type="text" class="form-control" id="eventYear" formControlName="year" placeholder="YYYY or -YYYY">
+    </div>
+    <div class="mb-3">
+      <label for="eventDescription" class="form-label">Event Description:</label>
+      <textarea class="form-control" id="eventDescription" formControlName="description" rows="5"
+        placeholder="Describe the historical event here..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-auto save-button">Save</button>
+  </form>
+</div>
