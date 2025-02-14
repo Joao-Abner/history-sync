@@ -2,26 +2,34 @@
 
 /* Container principal */
 .container {
-  max-width: 37.5rem;
-  /* margin-left: 28rem; */
-  margin: 0 auto;
-  padding: 1.25rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  overflow-y: auto;
+  margin-top: 2.5rem;
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 75%;
   background-color: var(--klistapp-nero);
-  border-radius: 0.5rem;
+  color: var(--klistapp-mine-shaft);
+  padding: 1.25rem;
+  border-radius: var(--bs-border-radius);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   z-index: 995;
-  /* Garante que o contêiner ocupe a altura total da viewport */
 }
 
 /* Título da página */
 h2 {
   text-align: center;
   margin-bottom: 1.25rem;
+  /* 20px */
   color: #333;
 }
 
@@ -40,7 +48,6 @@ form {
   border: 0.0625rem solid #ccc;
   border-radius: 0.25rem;
   font-size: 1rem;
-
 }
 
 /* Estilos para os labels */
@@ -75,10 +82,20 @@ form {
 }
 
 /* Estilos responsivos */
-@media (max-width: 48rem) {
-
+@media (max-width: 768px) {
   .container {
     padding: 0.9375rem;
+    /* 15px */
+    width: 90%;
+    /* Ajusta a largura para telas menores */
+    height: auto;
+    /* Ajusta a altura para telas menores */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centraliza usando transform */
   }
 
   .form-control {
