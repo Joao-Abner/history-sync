@@ -7,6 +7,13 @@
   display: flex;
 }
 
+app-header {
+  flex: 0 0 100%;
+  /* Largura fixa para o cabeçalho */
+  position: fixed;
+  width: 100%;
+}
+
 /* Estilos para o menu lateral */
 app-menu {
   flex: 0 0 250px;
@@ -15,8 +22,6 @@ app-menu {
   /* Altura total da viewport */
   position: fixed;
   /* Fixa o menu lateral */
-  z-index: 1000;
-  /* Garante que o menu lateral fique acima do conteúdo */
 }
 
 /* Estilos para o conteúdo principal */
