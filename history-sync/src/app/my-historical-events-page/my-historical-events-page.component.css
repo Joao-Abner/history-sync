@@ -7,11 +7,11 @@
   overflow-y: auto;
   margin-top: 2.5rem;
   position: absolute;
-  top: 30%;
+  top: 42%;
   left: 55%;
   transform: translate(-50%, -50%);
   width: 50%;
-  height: 46%;
+  height: 65%;
   background-color: var(--klistapp-nero);
   color: var(--klistapp-mine-shaft);
   padding: 1.25rem;
@@ -23,7 +23,6 @@
 h2 {
   text-align: center;
   margin-bottom: 1.25rem;
-  /* 20px */
   color: #333;
 }
 
@@ -37,10 +36,13 @@ h2 {
 
 /* Estilos para cada item de evento */
 .event-item {
-  background-color: #f9f9f9;
-  border-radius: 0.3125rem;
-  padding: 0.625rem;
-  margin-bottom: 0.625rem;
+  background-color: var(--klistapp-wild-sand);
+  color: var(--klistapp-nero);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--bs-border-radius);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 h3.event-title {
@@ -48,26 +50,7 @@ h3.event-title {
   color: var(--klistapp-mine-shaft);
 }
 
-.event-description {
+.event-description,
+.event-year {
   color: var(--klistapp-mine-shaft);
 }
-
-/* .event-year,
-.event-description {
-  margin: 0.25rem 0;
-} */
-
-/* Estilos para o botão de deletar */
-/* .delete-btn {
-  background-color: #ff4d4d;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.delete-btn:hover {
-  background-color: #ff1a1a;
-} */

@@ -2,11 +2,10 @@
   <h2>My Historical Events</h2>
   <div id="my-historicalEvents">
     <!-- Conteúdo da página My Historical Events -->
-    <h1>Eventos Históricos Adicionados</h1>
     <div *ngFor="let event of events" class="event-item">
       <h3 class="event-title">Título: {{ event.eventoFormDados.titulo }}</h3>
-      <p class="event-year">Ano do Evento: {{ event.eventoFormDados.anoInput }}</p>
-      <p class="event-description">Descrição: {{ event.eventoFormDados.descricao }}</p>
+      <h3 class="event-year">Ano do Evento: {{ event.eventoFormDados.anoInput }}</h3>
+      <h3 class="event-description">Descrição: {{ event.eventoFormDados.descricao }}</h3>
       <button class="delete-btn" (click)="deleteEvent(event.id)">Deletar</button>
     </div>
   </div>
