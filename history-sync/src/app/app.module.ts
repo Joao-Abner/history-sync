@@ -9,6 +9,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { NewEventPageComponent } from './new-event-page/new-event-page.component';
 import { SearchEventPageComponent } from './search-event-page/search-event-page.component';
+import { MyHistoricalEventsPageComponent } from './my-historical-events-page/my-historical-events-page.component';
+import { ApiHistoricalEventsPageComponent } from './api-historical-events-page/api-historical-events-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SearchEventPageComponent } from './search-event-page/search-event-page.
     MenuComponent,
     HeaderComponent,
     NewEventPageComponent,
-    SearchEventPageComponent
+    SearchEventPageComponent,
+    MyHistoricalEventsPageComponent,
+    ApiHistoricalEventsPageComponent
   ],
   imports: [
     BrowserModule,
