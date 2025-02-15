@@ -1,4 +1,19 @@
 <div class="container">
   <h2>Search Event</h2>
-  <!-- Adicione aqui o formulário ou a lógica para buscar eventos -->
+  <form [formGroup]="searchEventForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="buscarEventoInput" class="form-label">Event Name</label>
+      <input type="text" class="form-control" id="buscarEventoInput" formControlName="eventName"
+        placeholder="Enter keywords about the event..." required>
+      <div
+        *ngIf="searchEventForm.get('eventName')!.invalid && (searchEventForm.get('eventName')!.dirty || searchEventForm.get('eventName')!.touched)"
+        class="error-message">
+        <small *ngIf="searchEventForm.get('eventName')!.errors?.['required']">Event name is required.</small>
+        <small *ngIf="searchEventForm.get('eventName')!.errors?.['minlength']">Event name must be at least 3 characters
+          long.</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-auto save-button"
+      [disabled]="searchEventForm.invalid">Search</button>
+  </form>
 </div>

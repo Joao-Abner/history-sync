@@ -1,0 +1,75 @@
+/* Estilos para a página de busca de eventos */
+
+/* Container principal */
+.container {
+  font-family: Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-top: 2.5rem;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 34%;
+  padding: 1.25rem;
+  background-color: var(--klistapp-nero);
+  color: var(--klistapp-mine-shaft);
+  border-radius: var(--bs-border-radius);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* Título da página */
+h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+/* Estilos para o formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Garante que o formulário ocupe a largura total do contêiner */
+}
+
+/* Estilos para os campos do formulário */
+.form-control {
+  margin-bottom: 0.9375rem;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+/* Estilos para os labels */
+.form-label {
+  margin-bottom: 0.3125rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Estilos para o botão de buscar */
+.save-button {
+  padding: 0.625rem 1.25rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para mensagens de erro */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: -0.625rem;
+  margin-bottom: 0.625rem;
+}

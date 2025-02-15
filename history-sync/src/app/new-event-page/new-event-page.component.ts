@@ -13,9 +13,9 @@ export class NewEventPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.eventForm = this.fb.group({
-      title: ['', [Validators.required, Validators.pattern('[A-Za-z\\sáéíóúâêôç]{3,50}')]],
+      title: ['', [Validators.required, Validators.minLength(3), Validators.pattern('[A-Za-z\\sáéíóúâêôç]{3,50}')]],
       year: ['', [Validators.required, Validators.pattern('-?\\d{4}')]],
-      description: ['', [Validators.required, Validators.pattern('[A-Za-z0-9\\sáéíóúâêôç]+')]]
+      description: ['', [Validators.required, Validators.minLength(10), Validators.pattern('[A-Za-z0-9\\sáéíóúâêôç]+')]]
     });
   }
 
