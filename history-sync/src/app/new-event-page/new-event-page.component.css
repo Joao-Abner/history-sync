@@ -85,7 +85,6 @@ form {
 @media (max-width: 768px) {
   .container {
     padding: 0.9375rem;
-    /* 15px */
     width: 90%;
     /* Ajusta a largura para telas menores */
     height: auto;

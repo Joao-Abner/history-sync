@@ -5,16 +5,33 @@
       <label for="eventTitle" class="form-label">Title:</label>
       <input type="text" class="form-control" id="eventTitle" formControlName="title"
         placeholder="Enter the event title here...">
+      <div *ngIf="eventForm.get('title')!.invalid && (eventForm.get('title')!.dirty || eventForm.get('title')!.touched)"
+        class="error-message">
+        <small *ngIf="eventForm.get('title')!.errors?.['required']">Title is required.</small>
+        <small *ngIf="eventForm.get('title')!.errors?.['minlength']">Title must be at least 3 characters long.</small>
+      </div>
     </div>
     <div class="mb-3">
       <label for="eventYear" class="form-label">Year:</label>
       <input type="text" class="form-control" id="eventYear" formControlName="year" placeholder="YYYY or -YYYY">
+      <div *ngIf="eventForm.get('year')!.invalid && (eventForm.get('year')!.dirty || eventForm.get('year')!.touched)"
+        class="error-message">
+        <small *ngIf="eventForm.get('year')!.errors?.['required']">Year is required.</small>
+        <small *ngIf="eventForm.get('year')!.errors?.['pattern']">Year must be a valid format (YYYY or -YYYY).</small>
+      </div>
     </div>
     <div class="mb-3">
       <label for="eventDescription" class="form-label">Event Description:</label>
       <textarea class="form-control" id="eventDescription" formControlName="description" rows="5"
         placeholder="Describe the historical event here..."></textarea>
+      <div
+        *ngIf="eventForm.get('description')!.invalid && (eventForm.get('description')!.dirty || eventForm.get('description')!.touched)"
+        class="error-message">
+        <small *ngIf="eventForm.get('description')!.errors?.['required']">Description is required.</small>
+        <small *ngIf="eventForm.get('description')!.errors?.['minlength']">Description must be at least 10 characters
+          long.</small>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary mt-auto save-button">Save</button>
+    <button type="submit" class="btn btn-primary mt-auto save-button" [disabled]="eventForm.invalid">Save</button>
   </form>
 </div>
