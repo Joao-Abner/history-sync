@@ -10,7 +10,7 @@
 }
 
 .menu-lateral-esquerdo.oculto {
-  transform: translateX(-100%);
+  transform: translateX(-110%);
   /* Move o menu lateral para fora da tela */
 }
 
