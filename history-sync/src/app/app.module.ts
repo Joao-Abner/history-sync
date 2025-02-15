@@ -11,6 +11,7 @@ import { NewEventPageComponent } from './new-event-page/new-event-page.component
 import { SearchEventPageComponent } from './search-event-page/search-event-page.component';
 import { MyHistoricalEventsPageComponent } from './my-historical-events-page/my-historical-events-page.component';
 import { ApiHistoricalEventsPageComponent } from './api-historical-events-page/api-historical-events-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ApiHistoricalEventsPageComponent } from './api-historical-events-page/a
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [NgbActiveModal],
   bootstrap: [AppComponent]
