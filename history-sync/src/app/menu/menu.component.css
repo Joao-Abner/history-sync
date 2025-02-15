@@ -28,23 +28,29 @@
 /* Botões */
 .new-event-button,
 .search-events,
+.my-historical-events,
+.api-historical-events,
 .menu-all-button,
 .save-button,
 .delete-btn {
   color: var(--klistapp-mine-shaft);
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
-  font-size: 1.45rem;
+  font-size: 1.12rem;
 }
 
 .new-event-button i,
 .search-events i,
+.my-historical-events i,
+.api-historical-events i,
 .menu-all-button i {
   color: inherit;
 }
 
 .new-event-button:hover,
 .search-events:hover,
+.my-historical-events:hover,
+.api-historical-events:hover,
 .menu-all-button:hover,
 .save-button:hover,
 .delete-btn:hover {

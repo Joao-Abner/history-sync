@@ -36,4 +36,14 @@ export class MenuComponent implements OnInit {
   openSearchEventPage(): void {
     this.router.navigate(['/search-event']);
   }
+
+  // Método para navegar para a página de eventos históricos do usuário
+  openMyHistoricalEventsPage(): void {
+    this.router.navigate(['/my-historical-events']);
+  }
+
+  // Método para navegar para a página de eventos históricos da API
+  openApiHistoricalEventsPage(): void {
+    this.router.navigate(['/api-historical-events']);
+  }
 }
