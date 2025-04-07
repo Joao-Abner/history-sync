@@ -1,7 +1,7 @@
 # history-sync - Gerenciamento de Eventos Históricos
 - Identificação/Autor: João Abner Pereira de Almeida.
 - Descrição do projeto: A aplicação é sobre organizar e mostrar eventos importantes da história. 
-- Prototipação no Figma: Link para o projeto do Figma, onde o design das telas foi desenvolvido.
+- Prototipação no Figma: https://www.figma.com/design/fPd7TJurYzAqUGI1rGBsaf/Gerenciamento-de-Eventos-Hist%C3%B3ricos?node-id=0-1&t=GO3LjMbKO5lXzGwi-1
 - Design System: Link para o documento que descreve o Design System da aplicação.
 - Framework CSS: Nome do Framework CSS utilizado.
 - Dependências: Lista das bibliotecas JavaScript utilizadas. 
