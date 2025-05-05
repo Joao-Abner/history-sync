@@ -1,0 +1,8 @@
+footer {
+  text-align: center;
+  /* padding: 1.25rem; */
+  padding: 0.5625rem 0.5rem;
+  background-color: var(--klistapp-jacksons-purple);
+  margin-top: 43%;
+  color: var(--klistapp-nero);
+}
