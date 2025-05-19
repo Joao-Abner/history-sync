@@ -1,0 +1,33 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centraliza verticalmente */
+  align-items: center;
+  /* Centraliza horizontalmente */
+  height: 100vh;
+  /* Faz o contêiner ocupar toda a altura da viewport */
+  text-align: center;
+  color: #333;
+}
+
+.welcome-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.name-input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+<div class="welcome-container">
+  <h1>{{ welcomeMessage }}</h1>
+  <p>Explore o sistema e pesquise sobre eventos Históricos!</p>
+
+  <input [(ngModel)]="userName" (input)="updateWelcomeMessage()" placeholder="Digite seu nome" class="name-input" />
+</div>
