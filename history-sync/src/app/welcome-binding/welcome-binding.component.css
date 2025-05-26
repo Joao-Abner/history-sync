@@ -2,23 +2,30 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centraliza verticalmente */
   align-items: center;
-  /* Centraliza horizontalmente */
-  height: 100vh;
-  /* Faz o contêiner ocupar toda a altura da viewport */
+  min-height: 70vh;
+  /* Deixe espaço para header/footer */
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 500px;
   text-align: center;
-  color: #333;
+  color: var(--klistapp-mine-shaft, #333);
 }
 
 .welcome-container h1 {
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--klistapp-jacksons-purple, #4B3869);
 }
 
 .welcome-container p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .name-input {
@@ -30,4 +37,10 @@
   width: 100%;
   max-width: 300px;
   text-align: center;
+  transition: border-color 0.2s;
+}
+
+.name-input:focus {
+  border-color: var(--klistapp-jacksons-purple, #4B3869);
+  outline: none;
 }

@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome-binding/welcome-binding.component';
+import { NewEventPageComponent } from './new-event-page/new-event-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WelcomeComponent } from './welcome-binding/welcome-binding.component';
     MenuComponent,
     HeaderComponent,
     FooterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    NewEventPageComponent
   ],
   imports: [
     BrowserModule,
