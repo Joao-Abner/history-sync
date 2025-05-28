@@ -24,7 +24,7 @@ import { SearchEventsPageComponent } from './search-events-page/search-events-pa
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
