@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome-binding/welcome-binding.component';
 import { NewEventPageComponent } from './new-event-page/new-event-page.component';
+import { SearchEventsPageComponent } from './search-events-page/search-events-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NewEventPageComponent } from './new-event-page/new-event-page.component
     HeaderComponent,
     FooterComponent,
     WelcomeComponent,
-    NewEventPageComponent
+    NewEventPageComponent,
+    SearchEventsPageComponent
   ],
   imports: [
     BrowserModule,
