@@ -6,6 +6,7 @@ import { SearchEventsPageComponent } from './search-events-page/search-events-pa
 
 const routes: Routes = [
   { path: '', component: WelcomeBindingComponent }, // Página inicial
+  { path: 'saudacao/:nome', component: WelcomeBindingComponent }, // rota com parâmetro
   { path: 'new-event-page', component: NewEventPageComponent }, // Página de novo evento
   { path: 'search-events-page', component: SearchEventsPageComponent }, // Página de novo evento
 ];

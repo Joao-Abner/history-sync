@@ -3,4 +3,5 @@
   <p>Explore o sistema e pesquise sobre eventos Históricos!</p>
 
   <input [(ngModel)]="userName" (input)="updateWelcomeMessage()" placeholder="Digite seu nome" class="name-input" />
+  <a [routerLink]="['/saudacao', userName]" *ngIf="userName">Ir para saudação personalizada</a>
 </div>

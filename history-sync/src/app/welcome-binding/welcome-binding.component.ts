@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -10,11 +11,19 @@ export class WelcomeBindingComponent implements OnInit {
   userName: string = '';
   welcomeMessage: string = '';
 
-  constructor(private userService: UserService) { }
+  constructor(private route: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit() {
-    this.userName = this.userService.getUserName();
-    this.updateWelcomeMessage();
+    // Verifica se veio parâmetro na rota
+    this.route.params.subscribe(params => {
+      if (params['nome']) {
+        this.userName = params['nome'];
+        this.userService.setUserName(this.userName);
+      } else {
+        this.userName = this.userService.getUserName();
+      }
+      this.updateWelcomeMessage();
+    });
   }
 
   updateWelcomeMessage(): void {
