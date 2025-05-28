@@ -8,11 +8,8 @@
   justify-content: space-between;
   height: 5.125rem;
   position: sticky;
-  /* Fixa a navbar no topo da página */
   z-index: 1000;
-  /* Garante que a navbar fique acima de outros elementos */
   top: 0;
-  /* Define a posição inicial da navbar */
 }
 
 .menu-button {
@@ -57,16 +54,19 @@
   justify-content: flex-start;
 }
 
-/* Menu Lateral Esquerdo */
 .menu-lateral-esquerdo {
   font-size: 14px;
   width: 16%;
-  /* Ocupa toda a largura de 16% da tela */
   height: 100vh;
-  /* Altura total da viewport */
   position: relative;
   background-color: var(--klistapp-wild-sand);
   z-index: 999;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
+}
+
+.user-info {
+  margin-left: auto;
+  padding-right: 1rem;
+  color: var(--klistapp-nero);
 }

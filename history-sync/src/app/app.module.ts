@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { WelcomeComponent } from './welcome-binding/welcome-binding.component';
+import { WelcomeBindingComponent } from './welcome-binding/welcome-binding.component';
 import { NewEventPageComponent } from './new-event-page/new-event-page.component';
 import { SearchEventsPageComponent } from './search-events-page/search-events-page.component';
 
@@ -17,7 +17,7 @@ import { SearchEventsPageComponent } from './search-events-page/search-events-pa
     MenuComponent,
     HeaderComponent,
     FooterComponent,
-    WelcomeComponent,
+    WelcomeBindingComponent,
     NewEventPageComponent,
     SearchEventsPageComponent
   ],

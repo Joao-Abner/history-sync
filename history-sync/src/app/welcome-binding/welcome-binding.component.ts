@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-welcome',
+  selector: 'app-welcome-binding',
   templateUrl: './welcome-binding.component.html',
   styleUrls: ['./welcome-binding.component.css']
 })
-export class WelcomeComponent {
+export class WelcomeBindingComponent implements OnInit {
   userName: string = '';
   welcomeMessage: string = '';
 
-  constructor() {
-    this.updateWelcomeMessage(); // Inicializa a mensagem com base no horário
+  constructor(private userService: UserService) { }
+
+  ngOnInit() {
+    this.userName = this.userService.getUserName();
+    this.updateWelcomeMessage();
   }
 
   updateWelcomeMessage(): void {
+    this.userService.setUserName(this.userName);
     const hour = new Date().getHours();
     if (hour < 12) {
       this.welcomeMessage = this.userName

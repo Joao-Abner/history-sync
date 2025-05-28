@@ -8,6 +8,9 @@
     <div class="title-container">
       <span class="history-sync-tittle">HistorySync</span>
     </div>
+    <div class="user-info">
+      <span *ngIf="userName">Olá, {{ userName }}!</span>
+    </div>
   </nav>
   <app-menu></app-menu>
 </header>
