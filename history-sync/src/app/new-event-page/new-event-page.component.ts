@@ -21,8 +21,14 @@ export class NewEventPageComponent implements OnInit {
 
   onSubmit() {
     if (this.eventForm.valid) {
-      // Lógica para salvar o evento
+      const event = this.eventForm.value;
+      // Recupera eventos já existentes do localStorage
+      const existingEvents = JSON.parse(localStorage.getItem('existingEvents') || '[]');
+      existingEvents.push(event);
+      localStorage.setItem('existingEvents', JSON.stringify(existingEvents));
       console.log(this.eventForm.value);
+      this.eventForm.reset();
+      alert('Evento cadastrado com sucesso!');
     }
   }
 }
