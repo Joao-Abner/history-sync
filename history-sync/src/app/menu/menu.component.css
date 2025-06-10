@@ -32,7 +32,8 @@
 
 /* Botões */
 .new-event-button,
-.search-events,
+.search-events-button,
+.my-events-button,
 .menu-all-button,
 .save-button,
 .delete-btn {
@@ -42,13 +43,15 @@
 }
 
 .new-event-button i,
-.search-events i,
+.search-events-button i,
+.my-events-button i,
 .menu-all-button i {
   color: inherit;
 }
 
 .new-event-button:hover,
-.search-events:hover,
+.search-events-button:hover,
+.my-events-button:hover,
 .menu-all-button:hover,
 .save-button:hover,
 .delete-btn:hover {

@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { WelcomeBindingComponent } from './welcome-binding/welcome-binding.component';
 import { NewEventPageComponent } from './new-event-page/new-event-page.component';
 import { SearchEventsPageComponent } from './search-events-page/search-events-page.component';
+import { MyEventsPageComponent } from './my-events-page/my-events-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchEventsPageComponent } from './search-events-page/search-events-pa
     FooterComponent,
     WelcomeBindingComponent,
     NewEventPageComponent,
-    SearchEventsPageComponent
+    SearchEventsPageComponent,
+    MyEventsPageComponent
   ],
   imports: [
     BrowserModule,
