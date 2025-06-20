@@ -1,10 +1,9 @@
 <div class="my-events-container">
   <h2>My Events</h2>
   <div *ngIf="events.length === 0">No events found.</div>
-  <ul *ngIf="events.length > 0">
-    <li *ngFor="let event of events">
-      <strong>{{ event.title }}</strong> ({{ event.year }})<br>
-      <span>{{ event.description }}</span>
-    </li>
-  </ul>
+  <div *ngFor="let event of events" class="event-card">
+    <h5 class="card-title">{{ event.title }}</h5>
+    <h6 class="card-subtitle">{{ event.year }}</h6>
+    <p class="card-text">{{ event.description }}</p>
+  </div>
 </div>
