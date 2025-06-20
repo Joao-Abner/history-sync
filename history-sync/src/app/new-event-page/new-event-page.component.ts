@@ -20,18 +20,16 @@ export class NewEventPageComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.eventForm.valid) {
-      this.MyEventService.addEvent(this.eventForm.value).subscribe({
-        next: (response) => {
-          alert('Event added successfully!');
-          this.eventForm.reset();
-        },
-        error: (err) => {
-          alert('Error adding event!');
-          console.error(err);
-        }
-      });
+      try {
+        await this.MyEventService.addEvent(this.eventForm.value);
+        alert('Event added successfully!');
+        this.eventForm.reset();
+      } catch (err) {
+        alert('Error adding event!');
+        console.error(err);
+      }
     }
   }
 }

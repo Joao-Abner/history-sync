@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyEventService } from '../services/my-events.service';
+import { MyEventService, Event } from '../services/my-events.service';
 
 @Component({
   selector: 'app-my-events-page',
@@ -7,14 +7,15 @@ import { MyEventService } from '../services/my-events.service';
   styleUrls: ['./my-events-page.component.css']
 })
 export class MyEventsPageComponent implements OnInit {
-  events: any[] = [];
+  events: Event[] = [];
 
-  constructor(private MyEventService: MyEventService) { }
+  constructor(private myEventService: MyEventService) { }
 
-  ngOnInit() {
-    this.MyEventService.getEvents().subscribe({
-      next: (data) => this.events = data,
-      error: (err) => console.error(err)
-    });
+  async ngOnInit() {
+    try {
+      this.events = await this.myEventService.getEvents();
+    } catch (err) {
+      console.error(err);
+    }
   }
 }
