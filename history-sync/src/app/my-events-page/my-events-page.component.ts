@@ -1,18 +1,20 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MyEventService } from '../services/my-events.service';
 
 @Component({
   selector: 'app-my-events-page',
   templateUrl: './my-events-page.component.html',
-  styleUrl: './my-events-page.component.css'
+  styleUrls: ['./my-events-page.component.css']
 })
-export class MyEventsPageComponent {
+export class MyEventsPageComponent implements OnInit {
   events: any[] = [];
-  constructor(private http: HttpClient) { }
+
+  constructor(private MyEventService: MyEventService) { }
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:3000/my-events').subscribe(data => {
-      this.events = data;
+    this.MyEventService.getEvents().subscribe({
+      next: (data) => this.events = data,
+      error: (err) => console.error(err)
     });
   }
 }

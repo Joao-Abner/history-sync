@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MyEventService } from '../services/my-events.service';
 
 @Component({
   selector: 'app-new-event-page',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class NewEventPageComponent implements OnInit {
   eventForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private MyEventService: MyEventService) { }
 
   ngOnInit() {
     this.eventForm = this.fb.group({
@@ -21,14 +22,16 @@ export class NewEventPageComponent implements OnInit {
 
   onSubmit() {
     if (this.eventForm.valid) {
-      const event = this.eventForm.value;
-      // Recupera eventos já existentes do localStorage
-      const existingEvents = JSON.parse(localStorage.getItem('existingEvents') || '[]');
-      existingEvents.push(event);
-      localStorage.setItem('existingEvents', JSON.stringify(existingEvents));
-      console.log(this.eventForm.value);
-      this.eventForm.reset();
-      alert('Evento cadastrado com sucesso!');
+      this.MyEventService.addEvent(this.eventForm.value).subscribe({
+        next: (response) => {
+          alert('Event added successfully!');
+          this.eventForm.reset();
+        },
+        error: (err) => {
+          alert('Error adding event!');
+          console.error(err);
+        }
+      });
     }
   }
 }
