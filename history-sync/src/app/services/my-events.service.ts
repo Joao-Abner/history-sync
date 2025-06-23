@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { lastValueFrom } from 'rxjs';
+import { lastValueFrom, Observable } from 'rxjs';
 
 export interface Event {
   id?: number;
@@ -15,11 +15,13 @@ export class MyEventService {
 
   constructor(private http: HttpClient) { }
 
-  getEvents(): Promise<Event[]> {
-    return lastValueFrom(this.http.get<Event[]>(this.apiUrl));
+  getEvents(): Observable<Event[]> {
+    // return lastValueFrom(this.http.get<Event[]>(this.apiUrl));
+    return this.http.get<Event[]>(this.apiUrl);
   }
 
-  addEvent(event: Event): Promise<Event> {
-    return lastValueFrom(this.http.post<Event>(this.apiUrl, event));
+  addEvent(event: Event): Observable<Event> {
+    // return lastValueFrom(this.http.post<Event>(this.apiUrl, event));
+    return this.http.post<Event>(this.apiUrl, event);
   }
 }
