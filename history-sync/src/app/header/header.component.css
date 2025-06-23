@@ -1,0 +1,72 @@
+.navbar {
+  background: var(--klistapp-jacksons-purple);
+  padding: 0.5625rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.125rem;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.bi {
+  color: var(--klistapp-nero);
+  background-color: transparent;
+}
+
+.menu-icon {
+  border: none;
+  cursor: pointer;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.history-sync-tittle {
+  color: var(--klistapp-nero, #ffffff);
+  text-align: left;
+  font-family: "Actor-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: relative;
+  max-width: 13.4612rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-lateral-esquerdo {
+  font-size: 14px;
+  width: 16%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--klistapp-wild-sand);
+  z-index: 999;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-info {
+  margin-left: auto;
+  padding-right: 1rem;
+  color: var(--klistapp-nero);
+}

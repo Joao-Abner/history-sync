@@ -1,0 +1,74 @@
+.menu-lateral-esquerdo {
+  font-size: 14px;
+  width: 16%;
+  /* Ocupa toda a largura de 16% da tela */
+  height: 90vh;
+  /* Altura total da viewport */
+
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background-color: var(--klistapp-wild-sand);
+  z-index: 999;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-lateral-esquerdo.oculto {
+  transform: translateX(-110%);
+  /* Move o menu lateral para fora da tela */
+}
+
+.navegacao ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.navegacao li {
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Botões */
+.new-event-button,
+.search-events-button,
+.my-events-button,
+.menu-all-button,
+.save-button,
+.delete-btn {
+  color: var(--klistapp-mine-shaft);
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.new-event-button i,
+.search-events-button i,
+.my-events-button i,
+.menu-all-button i {
+  color: inherit;
+}
+
+.new-event-button:hover,
+.search-events-button:hover,
+.my-events-button:hover,
+.menu-all-button:hover,
+.save-button:hover,
+.delete-btn:hover {
+  color: var(--klistapp-nero);
+  background-color: var(--klistapp-bay-of-many);
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.625rem;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}

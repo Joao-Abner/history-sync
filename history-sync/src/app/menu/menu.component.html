@@ -1,0 +1,36 @@
+<!-- menu lateral esquerdo -->
+<div class="menu-lateral-esquerdo">
+  <div class="menu-principal">
+    <!-- Navegação -->
+    <nav class="navegacao">
+      <ul id="ul-navegacao">
+        <li>
+          <button type="button" class="btn new-event-button" [routerLink]="['/new-event-page']">
+            <i class="bi bi-plus-square-fill"></i>
+            New
+            Event</button>
+        </li>
+        <li>
+          <button type="button" class="btn my-events-button" [routerLink]="['/my-events']">
+            <i class="bi bi-list-ul"></i>
+            My Events
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn search-events-button" [routerLink]="['/search-events-page']"
+            id="search-events">
+            <i class="bi bi-search"></i>
+            Search
+            Events
+          </button>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+  <!-- Logo do Projeto -->
+  <div class="logo-container">
+    <img src="https://res.cloudinary.com/daqpjdyeu/image/upload/v1718848182/HistorySync/logo-historySync_il8vzc.png"
+      alt="Logo HistorySync">
+  </div>
+</div>

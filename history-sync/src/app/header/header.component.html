@@ -1,0 +1,16 @@
+<header>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <button class="menu-button">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+    </div>
+    <div class="title-container">
+      <span class="history-sync-tittle">HistorySync</span>
+    </div>
+    <div class="user-info">
+      <span *ngIf="userName">Olá, {{ userName }}!</span>
+    </div>
+  </nav>
+  <app-menu></app-menu>
+</header>
