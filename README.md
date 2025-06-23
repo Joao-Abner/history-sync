@@ -9,7 +9,6 @@
 - Checklist de Funcionalidades: Uma lista de funcionalidades marcadas como concluídas (ou não) durante o desenvolvimento. 
 - Instruções de Execução: Passos detalhados para configurar e executar a aplicação localmente.
 - Telas da Aplicação: Imagens de algumas telas da aplicação.
-- 
 ## Checklist
 #### RA1 - Prototipar e projetar interfaces gráficas de usuário, considerando princípios de usabilidade e experiência do usuário.
 - [ ] ID1: O aluno desenvolveu protótipos de interfaces que demonstram compreensão das diretrizes de usabilidade.
