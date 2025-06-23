@@ -3,7 +3,7 @@
   <div *ngIf="events.length === 0">No events found.</div>
   <div *ngFor="let event of events" class="event-card">
     <h5 class="card-title">{{ event.title | uppercase }}</h5>
-    <h6 class="card-subtitle">{{ event.year}}</h6>
+    <h6 class="card-subtitle">Year: {{ event.year}}</h6>
     <p class="card-text">{{ event.description }}</p>
   </div>
 </div>
