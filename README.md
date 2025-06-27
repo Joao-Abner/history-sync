@@ -90,7 +90,7 @@
    - **Via script do `package.json` (recomendado):**
      - Comando: `npm run json-server`
    - **Ou manualmente:**
-     - Comando: `json-server --watch db.json --routes routes.json --port 3000`
+     - Comando: `json-server --watch db.json --port 3000`
    - Certifique-se de executar o comando na pasta `history-sync/history-sync`, onde estão os arquivos `db.json` e `routes.json`.
    - Por padrão, o JSON Server estará disponível em `http://localhost:3000`.
 
