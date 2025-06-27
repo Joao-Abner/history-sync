@@ -10,7 +10,7 @@ import { MyEventService } from '../services/my-events.service';
 export class NewEventPageComponent implements OnInit {
   eventForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private MyEventService: MyEventService) { }
+  constructor(private fb: FormBuilder, private myEventService: MyEventService) { }
 
   ngOnInit() {
     this.eventForm = this.fb.group({
@@ -22,14 +22,16 @@ export class NewEventPageComponent implements OnInit {
 
   async onSubmit() {
     if (this.eventForm.valid) {
-      try {
-        await this.MyEventService.addEvent(this.eventForm.value);
-        alert('Event added successfully!');
-        this.eventForm.reset();
-      } catch (err) {
-        alert('Error adding event!');
-        console.error(err);
-      }
+      this.myEventService.addEvent(this.eventForm.value).subscribe({
+        next: () => {
+          alert('Event added successfully');
+          this.eventForm.reset();
+        },
+        error: (err) => {
+          alert('Error adding event! ');
+          console.error(err);
+        }
+      });
     }
   }
 }
