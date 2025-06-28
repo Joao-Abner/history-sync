@@ -136,5 +136,6 @@
     Isso iniciará o servidor de desenvolvimento e abrirá o projeto no seu navegador padrão (`http://localhost:4200/`).
 
 - ## Telas da Aplicação:
-  ![imagem-tela-visualização-meus-eventos](image.png)
-  ![tela-boas-vindas](image-1.png)
+  ![screen-welcome](image-1.png)
+  ![screen-new-event](image-2.png)
+  ![screen-my-events](image.png)
