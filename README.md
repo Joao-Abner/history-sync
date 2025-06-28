@@ -5,7 +5,14 @@
 - Prototipação no Figma: https://www.figma.com/design/fPd7TJurYzAqUGI1rGBsaf/Gerenciamento-de-Eventos-Hist%C3%B3ricos?node-id=0-1&t=GO3LjMbKO5lXzGwi-1
 - Design System: https://docs.google.com/document/d/1sBL56EcXLFpoxfQ5g4eEiOSS8GxE3r-Fw6YJ5HnrFS0/edit?usp=sharing
 - Framework CSS: Bootstrap 5.3.3
-- Dependências: Lista das bibliotecas JavaScript utilizadas.
+- Dependências, Lista das bibliotecas JavaScript utilizadas:
+  - [Angular 18.2](https://angular.io/) (`@angular/animations`, `@angular/common`, `@angular/compiler`, `@angular/core`, `@angular/forms`, `@angular/platform-browser`, `@angular/platform-browser-dynamic`, `@angular/router`)
+  - [Bootstrap 5.3.3](https://getbootstrap.com/)
+  - [Bootstrap Icons 1.11.3](https://icons.getbootstrap.com/)
+  - [RxJS 7.8](https://rxjs.dev/)
+  - [Zone.js 0.14](https://github.com/angular/zone.js/)
+  - [TSLib 2.3](https://github.com/microsoft/tslib)
+  - [@types/bootstrap 5.2.10](https://www.npmjs.com/package/@types/bootstrap) (tipagens para Bootstrap)
 - Link para o site em produção: URL para acessar o site publicado no GitHub Pages.
 - Checklist de Funcionalidades: Uma lista de funcionalidades marcadas como concluídas (ou não) durante o desenvolvimento.
 - Instruções de Execução: Passos detalhados para configurar e executar a aplicação localmente.
