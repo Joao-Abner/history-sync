@@ -3,13 +3,18 @@
 - Identificação/Autor: João Abner Pereira de Almeida.
 - Descrição do projeto: A aplicação é sobre organizar e mostrar eventos importantes da história.
 - Prototipação no Figma: https://www.figma.com/design/fPd7TJurYzAqUGI1rGBsaf/Gerenciamento-de-Eventos-Hist%C3%B3ricos?node-id=0-1&t=GO3LjMbKO5lXzGwi-1
-- Design System: Link para o documento que descreve o Design System da aplicação.
-- Framework CSS: Nome do Framework CSS utilizado.
-- Dependências: Lista das bibliotecas JavaScript utilizadas.
+- Design System: https://docs.google.com/document/d/1sBL56EcXLFpoxfQ5g4eEiOSS8GxE3r-Fw6YJ5HnrFS0/edit?usp=sharing
+- Framework CSS: Bootstrap 5.3.3
+- Dependências, Lista das bibliotecas JavaScript utilizadas:
+  - [Angular 18.2](https://angular.io/) (`@angular/animations`, `@angular/common`, `@angular/compiler`, `@angular/core`, `@angular/forms`, `@angular/platform-browser`, `@angular/platform-browser-dynamic`, `@angular/router`)
+  - [Bootstrap 5.3.3](https://getbootstrap.com/)
+  - [Bootstrap Icons 1.11.3](https://icons.getbootstrap.com/)
+  - [RxJS 7.8](https://rxjs.dev/)
+  - [Zone.js 0.14](https://github.com/angular/zone.js/)
+  - [TSLib 2.3](https://github.com/microsoft/tslib)
+  - [@types/bootstrap 5.2.10](https://www.npmjs.com/package/@types/bootstrap) (tipagens para Bootstrap)
 - Link para o site em produção: URL para acessar o site publicado no GitHub Pages.
 - Checklist de Funcionalidades: Uma lista de funcionalidades marcadas como concluídas (ou não) durante o desenvolvimento.
-- Instruções de Execução: Passos detalhados para configurar e executar a aplicação localmente.
-- Telas da Aplicação: Imagens de algumas telas da aplicação.
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
@@ -61,53 +66,77 @@
 - [ ] **ID26:** Colaborar com outros membros do projeto, realizando fusões (merges) e resolução de conflitos.
 - [ ] **ID27:** Planejar, configurar e executar o processo de build da aplicação, preparando-a para produção e realizar o deploy em um ambiente de hospedagem.
 
-## Manual de execução
+## Instruções de Execução: Passos detalhados para configurar e executar a aplicação localmente.
 
-### Passos para executar o projeto:
+### Pré-requisitos
 
-1. **Clonar o repositório:**
+- **Node.js** (recomendado: versão 18.x ou superior)
+- **npm** (geralmente já vem com o Node.js)
+- **Angular CLI** (versão 18.x)
+  ```bash
+  npm install -g @angular/cli@18
+  ```
+- **JSON Server** (para simular a API fake)
+  ```bash
+  npm install -g json-server
+  ```
 
-   - Comando: `git clone <URL_DO_REPOSITORIO>`
+> Este projeto utiliza o Angular na versão 18.2. Certifique-se de instalar a mesma versão do Angular CLI para garantir compatibilidade.
 
-2. **Navegar até a pasta principal do projeto:**
+### Passos para Configurar e Executar o Projeto:
 
-   - Comando: `cd history-sync/history-sync`
+1.  **Clonar o Repositório:**
+    Abra seu terminal e clone o projeto:
 
-3. **Fazer checkout na branch `develop`:**
+    ```bash
+    git clone https://github.com/Joao-Abner/history-sync.git
+    ```
 
-   - Comando: `git checkout develop`
+2.  **Acessar o Projeto:**
+    Navegue para a pasta recém-clonada do projeto. Este será o diretório raiz onde você executará todos os comandos:
 
-4. **Abrir o projeto no editor Visual Studio Code:**
+    ```bash
+    cd history-sync
+    # Ou 'cd nome-da-pasta-que-voce-deu-ao-clonar'
+    ```
 
-   - Navegue até o diretório do projeto e abra-o no VS Code.
+3.  **Fazer Checkout na Branch `dev`:**
+    A branch de desenvolvimento principal é a `dev`. Certifique-se de estar nela:
 
-5. **Instalar as dependências do projeto:**
+    ```bash
+    git checkout dev
+    ```
 
-   - Comando: `npm install`
+4.  **Instalar as Dependências:**
+    Na raiz do projeto, instale todas as dependências necessárias:
 
-6. **Executar a API Fake (JSON Server):**
+    ```bash
+    npm install
+    ```
 
-   - **Via script do `package.json` (recomendado):**
-     - Comando: `npm run json-server`
-   - **Ou manualmente:**
-     - Comando: `json-server --watch db.json --port 3000`
-   - Certifique-se de executar o comando na pasta `history-sync/history-sync`, onde estão os arquivos `db.json` e `routes.json`.
-   - Por padrão, o JSON Server estará disponível em `http://localhost:3000`.
+5.  **Executar a API Fake (JSON Server):**
+    Para simular o backend, você precisará iniciar a API fake em um terminal **separado**.
 
-7. **Executar o projeto Angular:**
-   - Abra um novo terminal e execute:
-     - Comando: `ng serve -o`
-   - Isso iniciará o servidor de desenvolvimento e abrirá o navegador automaticamente.
+    - **Via script do `package.json` (recomendado):**
+      ```bash
+      npm run json-server
+      ```
+    - **Ou, manualmente (se preferir):**
+      Certifique-se de ter o `json-server` instalado (`npm install -g json-server`). Depois, execute na raiz do projeto:
+      ```bash
+      json-server --watch db.json --port 3000
+      ```
+    - A API estará acessível em: `http://localhost:3000`
 
----
+6.  **Executar o Projeto Angular:**
+    Abra um **novo terminal** na raiz do projeto e inicie o aplicativo Angular:
+    ```bash
+    ng serve -o
+    ```
+    Isso iniciará o servidor de desenvolvimento e abrirá o projeto no seu navegador padrão (`http://localhost:4200/`).
 
-### **Observações**
-
-- Certifique-se de sempre navegar até a pasta correta (`history-sync/history-sync`) antes de executar os comandos.
-- Caso prefira, você pode reorganizar o projeto para evitar a duplicação de pastas.
-
----
-
-### **Reorganização opcional**
-
-Se quiser simplificar, você pode mover os arquivos da pasta interna para a raiz do repositório e ajustar os caminhos no `package.json` e nos comandos. Isso tornará o projeto mais direto para quem for executá-lo.
+- ## Telas da Aplicação:
+  ![screen-welcome](image-1.png)
+  ![screen-new-event](image-2.png)
+  ![screen-my-events](image.png)
+  ![screen-my-events-close-menu](image-3.png)
