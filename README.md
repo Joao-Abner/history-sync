@@ -139,3 +139,4 @@
   ![screen-welcome](image-1.png)
   ![screen-new-event](image-2.png)
   ![screen-my-events](image.png)
+  ![screen-my-events-close-menu](image-3.png)
