@@ -4,7 +4,7 @@
 - Descrição do projeto: A aplicação é sobre organizar e mostrar eventos importantes da história.
 - Prototipação no Figma: https://www.figma.com/design/fPd7TJurYzAqUGI1rGBsaf/Gerenciamento-de-Eventos-Hist%C3%B3ricos?node-id=0-1&t=GO3LjMbKO5lXzGwi-1
 - Design System: https://docs.google.com/document/d/1sBL56EcXLFpoxfQ5g4eEiOSS8GxE3r-Fw6YJ5HnrFS0/edit?usp=sharing
-- Framework CSS: Nome do Framework CSS utilizado.
+- Framework CSS: Bootstrap 5.3.3
 - Dependências: Lista das bibliotecas JavaScript utilizadas.
 - Link para o site em produção: URL para acessar o site publicado no GitHub Pages.
 - Checklist de Funcionalidades: Uma lista de funcionalidades marcadas como concluídas (ou não) durante o desenvolvimento.
