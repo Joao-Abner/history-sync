@@ -63,51 +63,54 @@
 
 ## Manual de execução
 
-### Passos para executar o projeto:
+### Passos para Configurar e Executar o Projeto:
 
-1. **Clonar o repositório:**
+1.  **Clonar o Repositório:**
+    Abra seu terminal e clone o projeto:
 
-   - Comando: `git clone <URL_DO_REPOSITORIO>`
+    ```bash
+    git clone https://github.com/Joao-Abner/history-sync.git
+    ```
 
-2. **Navegar até a pasta principal do projeto:**
+2.  **Acessar o Projeto:**
+    Navegue para a pasta recém-clonada do projeto. Este será o diretório raiz onde você executará todos os comandos:
 
-   - Comando: `cd history-sync/history-sync`
+    ```bash
+    cd history-sync
+    # Ou 'cd nome-da-pasta-que-voce-deu-ao-clonar'
+    ```
 
-3. **Fazer checkout na branch `develop`:**
+3.  **Fazer Checkout na Branch `dev`:**
+    A branch de desenvolvimento principal é a `dev`. Certifique-se de estar nela:
 
-   - Comando: `git checkout develop`
+    ```bash
+    git checkout dev
+    ```
 
-4. **Abrir o projeto no editor Visual Studio Code:**
+4.  **Instalar as Dependências:**
+    Na raiz do projeto, instale todas as dependências necessárias:
 
-   - Navegue até o diretório do projeto e abra-o no VS Code.
+    ```bash
+    npm install
+    ```
 
-5. **Instalar as dependências do projeto:**
+5.  **Executar a API Fake (JSON Server):**
+    Para simular o backend, você precisará iniciar a API fake em um terminal **separado**.
 
-   - Comando: `npm install`
+    - **Via script do `package.json` (recomendado):**
+      ```bash
+      npm run json-server
+      ```
+    - **Ou, manualmente (se preferir):**
+      Certifique-se de ter o `json-server` instalado (`npm install -g json-server`). Depois, execute na raiz do projeto:
+      ```bash
+      json-server --watch db.json --port 3000
+      ```
+    - A API estará acessível em: `http://localhost:3000`
 
-6. **Executar a API Fake (JSON Server):**
-
-   - **Via script do `package.json` (recomendado):**
-     - Comando: `npm run json-server`
-   - **Ou manualmente:**
-     - Comando: `json-server --watch db.json --port 3000`
-   - Certifique-se de executar o comando na pasta `history-sync/history-sync`, onde estão os arquivos `db.json` e `routes.json`.
-   - Por padrão, o JSON Server estará disponível em `http://localhost:3000`.
-
-7. **Executar o projeto Angular:**
-   - Abra um novo terminal e execute:
-     - Comando: `ng serve -o`
-   - Isso iniciará o servidor de desenvolvimento e abrirá o navegador automaticamente.
-
----
-
-### **Observações**
-
-- Certifique-se de sempre navegar até a pasta correta (`history-sync/history-sync`) antes de executar os comandos.
-- Caso prefira, você pode reorganizar o projeto para evitar a duplicação de pastas.
-
----
-
-### **Reorganização opcional**
-
-Se quiser simplificar, você pode mover os arquivos da pasta interna para a raiz do repositório e ajustar os caminhos no `package.json` e nos comandos. Isso tornará o projeto mais direto para quem for executá-lo.
+6.  **Executar o Projeto Angular:**
+    Abra um **novo terminal** na raiz do projeto e inicie o aplicativo Angular:
+    ```bash
+    ng serve -o
+    ```
+    Isso iniciará o servidor de desenvolvimento e abrirá o projeto no seu navegador padrão (`http://localhost:4200/`).
