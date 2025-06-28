@@ -137,3 +137,4 @@
 
 - ## Telas da Aplicação:
   ![imagem-tela-visualização-meus-eventos](image.png)
+  ![tela-boas-vindas](image-1.png)
