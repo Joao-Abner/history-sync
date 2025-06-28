@@ -63,6 +63,21 @@
 
 ## Manual de execução
 
+### Pré-requisitos
+
+- **Node.js** (recomendado: versão 18.x ou superior)
+- **npm** (geralmente já vem com o Node.js)
+- **Angular CLI** (versão 18.x)
+  ```bash
+  npm install -g @angular/cli@18
+  ```
+- **JSON Server** (para simular a API fake)
+  ```bash
+  npm install -g json-server
+  ```
+
+> Este projeto utiliza o Angular na versão 18.2. Certifique-se de instalar a mesma versão do Angular CLI para garantir compatibilidade.
+
 ### Passos para Configurar e Executar o Projeto:
 
 1.  **Clonar o Repositório:**
