@@ -15,8 +15,6 @@
   - [@types/bootstrap 5.2.10](https://www.npmjs.com/package/@types/bootstrap) (tipagens para Bootstrap)
 - Link para o site em produção: URL para acessar o site publicado no GitHub Pages.
 - Checklist de Funcionalidades: Uma lista de funcionalidades marcadas como concluídas (ou não) durante o desenvolvimento.
-- Instruções de Execução: Passos detalhados para configurar e executar a aplicação localmente.
-- Telas da Aplicação: Imagens de algumas telas da aplicação.
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
@@ -68,7 +66,7 @@
 - [ ] **ID26:** Colaborar com outros membros do projeto, realizando fusões (merges) e resolução de conflitos.
 - [ ] **ID27:** Planejar, configurar e executar o processo de build da aplicação, preparando-a para produção e realizar o deploy em um ambiente de hospedagem.
 
-## Manual de execução
+## Instruções de Execução: Passos detalhados para configurar e executar a aplicação localmente.
 
 ### Pré-requisitos
 
@@ -136,3 +134,5 @@
     ng serve -o
     ```
     Isso iniciará o servidor de desenvolvimento e abrirá o projeto no seu navegador padrão (`http://localhost:4200/`).
+
+- ## Telas da Aplicação: Imagens de algumas telas da aplicação.
