@@ -1,9 +1,27 @@
 <div class="my-events-container">
   <h2>My Events</h2>
+
+  <!-- Formulário de edição -->
+  <div *ngIf="editMode && eventToEdit" class="event-card">
+    <h5>Editar Evento</h5>
+    <form (ngSubmit)="saveEdit()">
+      <input class="form-control" [(ngModel)]="eventToEdit.title" name="title" required placeholder="Título" />
+      <input class="form-control" [(ngModel)]="eventToEdit.year" name="year" required placeholder="Ano" />
+      <textarea class="form-control" [(ngModel)]="eventToEdit.description" name="description" required
+        placeholder="Descrição"></textarea>
+      <button type="submit" class="save-button">Salvar</button>
+      <button type="button" class="delete-button" (click)="cancelEdit()">Cancelar</button>
+    </form>
+  </div>
+
   <div *ngIf="events.length === 0">No events found.</div>
+  <!-- Exemplo de botões para cada evento -->
   <div *ngFor="let event of events" class="event-card">
     <h5 class="card-title">{{ event.title | uppercase }}</h5>
     <h6 class="card-subtitle">Year: {{ event.year}}</h6>
     <p class="card-text">{{ event.description }}</p>
+    <button class="update-button" (click)="startEdit(event)">Editar</button>
+    <button class="patch-button" (click)="patchEvent(event, { title: 'Novo título' })">Atualizar Título</button>
+    <button class="delete-button" (click)="deleteEvent(event)">Deletar</button>
   </div>
 </div>
