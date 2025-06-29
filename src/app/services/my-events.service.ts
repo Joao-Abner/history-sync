@@ -16,12 +16,10 @@ export class MyEventService {
   constructor(private http: HttpClient) { }
 
   getEvents(): Observable<Event[]> {
-    // return lastValueFrom(this.http.get<Event[]>(this.apiUrl));
     return this.http.get<Event[]>(this.apiUrl);
   }
 
   addEvent(event: Event): Observable<Event> {
-    // return lastValueFrom(this.http.post<Event>(this.apiUrl, event));
     return this.http.post<Event>(this.apiUrl, event);
   }
 }
