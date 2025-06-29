@@ -64,3 +64,55 @@ h2 {
   color: #666;
   margin-bottom: 1rem;
 }
+
+/* Botão de atualizar (PUT) */
+.update-button {
+  padding: 0.625rem 1.25rem;
+  background-color: var(--klistapp-jacksons-purple);
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.update-button:hover {
+  filter: brightness(1.25);
+}
+
+/* Botão de atualizar título (PATCH) */
+.patch-button {
+  padding: 0.625rem 1.25rem;
+  background-color: var(--klistapp-jacksons-purple);
+  ;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.patch-button:hover {
+  filter: brightness(1.15);
+}
+
+/* Botão de deletar */
+.delete-button {
+  padding: 0.625rem 1.25rem;
+  background-color: var(--klistapp-jacksons-purple);
+  ;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  filter: brightness(1.15);
+}

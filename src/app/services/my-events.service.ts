@@ -22,4 +22,19 @@ export class MyEventService {
   addEvent(event: Event): Observable<Event> {
     return this.http.post<Event>(this.apiUrl, event);
   }
+
+  updateEvent(id: number, event: Event): Observable<Event> {
+    // Atualiza todo o evento (PUT)
+    return this.http.put<Event>(`${this.apiUrl}/${id}`, event);
+  }
+
+  patchEvent(id: number, partialEvent: Partial<Event>): Observable<Event> {
+    // Atualiza parcialmente o evento (PATCH)
+    return this.http.patch<Event>(`${this.apiUrl}/${id}`, partialEvent);
+  }
+
+  deleteEvent(id: number): Observable<void> {
+    // Remove o evento (DELETE)
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
 }
