@@ -8,6 +8,8 @@ import { MyEventService, Event } from '../services/my-events.service';
 })
 export class MyEventsPageComponent implements OnInit {
   events: Event[] = [];
+  editMode: boolean = false;
+  eventToEdit: Event | null = null;
 
   constructor(private myEventService: MyEventService) { }
 
@@ -16,6 +18,34 @@ export class MyEventsPageComponent implements OnInit {
       next: (data) => this.events = data,
       error: (err) => console.error(err)
     });
+  }
+
+  // Inicia o modo de edição
+  startEdit(event: Event) {
+    // Cria uma cópia para edição
+    this.eventToEdit = { ...event };
+    this.editMode = true;
+  }
+
+  // Cancela a edição
+  cancelEdit() {
+    this.editMode = false;
+    this.eventToEdit = null;
+  }
+
+  // Salva as alterações do evento
+  saveEdit() {
+    if (this.eventToEdit && this.eventToEdit.id) {
+      this.myEventService.updateEvent(this.eventToEdit.id, this.eventToEdit).subscribe({
+        next: () => {
+          alert('Evento atualizado com sucesso!');
+          this.editMode = false;
+          this.eventToEdit = null;
+          this.ngOnInit(); // Atualiza a lista
+        },
+        error: () => alert('Erro ao atualizar evento!')
+      });
+    }
   }
 
   // Atualiza todo o evento (PUT)

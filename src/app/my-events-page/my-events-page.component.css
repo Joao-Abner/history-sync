@@ -113,6 +113,17 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+.save-button {
+  padding: 0.625rem 1.25rem;
+  background-color: var(--klistapp-jacksons-purple);
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .delete-button:hover {
   filter: brightness(1.15);
 }
