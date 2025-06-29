@@ -13,7 +13,7 @@
   - [Zone.js 0.14](https://github.com/angular/zone.js/)
   - [TSLib 2.3](https://github.com/microsoft/tslib)
   - [@types/bootstrap 5.2.10](https://www.npmjs.com/package/@types/bootstrap) (tipagens para Bootstrap)
-- Link para o site em produção: URL para acessar o site publicado no GitHub Pages.
+- Link para o site em produção: https://joao-abner.github.io/history-sync/
 - Checklist de Funcionalidades: Uma lista de funcionalidades marcadas como concluídas (ou não) durante o desenvolvimento.
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
