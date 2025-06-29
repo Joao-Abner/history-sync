@@ -26,22 +26,22 @@
 ### RA2 - Criar e reutilizar componentes em frameworks frontend, desenvolvendo interfaces modulares, responsivas e estilizadas.
 
 - [ ] **ID3:** Desenvolver componentes reutilizáveis e que se adaptem de maneira responsiva em vários tamanhos de tela.
-- [ ] **ID4:** Incorporar componentes de frameworks CSS.
-- [ ] **ID5:** Aplicar diretivas estruturais para exibir ou ocultar elementos de forma condicional.
-- [ ] **ID6:** Utilizar diretivas estruturais para repetir elementos de interface de maneira dinâmica, a fim de criar listas, galerias ou outras visualizações baseadas em conjuntos de dados.
-- [ ] **ID7:** Aplicar Pipes para formatar a apresentação de dados.
+- [x] **ID4:** Incorporar componentes de frameworks CSS.
+- [x] **ID5:** Aplicar diretivas estruturais para exibir ou ocultar elementos de forma condicional.
+- [x] **ID6:** Utilizar diretivas estruturais para repetir elementos de interface de maneira dinâmica, a fim de criar listas, galerias ou outras visualizações baseadas em conjuntos de dados.
+- [x] **ID7:** Aplicar Pipes para formatar a apresentação de dados.
 
 ### RA3 - Sincronizar dados entre a interface gráfica e o modelo de dados, aplicando técnicas de binding para manter a consistência.
 
-- [ ] **ID8:** Aplicar técnicas de one-way data binding, como Interpolation e Property Binding, para exibir e atualizar dados na interface gráfica de maneira unidirecional.
-- [ ] **ID9:** Aplicar técnicas de event binding para capturar eventos do usuário na interface e interagir com o modelo de dados.
-- [ ] **ID10:** Aplicar técnicas de two-way data binding para criar uma sincronização bidirecional automática entre a interface e o modelo de dados.
-- [ ] **ID11:** Usar variáveis de template para manipulação dinâmica dos dados na interface gráfica.
+- [x] **ID8:** Aplicar técnicas de one-way data binding, como Interpolation e Property Binding, para exibir e atualizar dados na interface gráfica de maneira unidirecional.
+- [x] **ID9:** Aplicar técnicas de event binding para capturar eventos do usuário na interface e interagir com o modelo de dados.
+- [x] **ID10:** Aplicar técnicas de two-way data binding para criar uma sincronização bidirecional automática entre a interface e o modelo de dados.
+- [x] **ID11:** Usar variáveis de template para manipulação dinâmica dos dados na interface gráfica.
 
 ### RA4 - Implementar comunicação eficaz entre componentes, utilizando padrões de comunicação e serviços para compartilhar lógica e dados.
 
-- [ ] **ID12:** Criar comunicação entre componentes não relacionados hierarquicamente por meio de serviços através do mecanismo de injeção de dependência.
-- [ ] **ID13:** Utilizar as diretivas @Input ou @Output para comunicação em uma hierarquia de componentes.
+- [x] **ID12:** Criar comunicação entre componentes não relacionados hierarquicamente por meio de serviços através do mecanismo de injeção de dependência.
+- [x] **ID13:** Utilizar as diretivas @Input ou @Output para comunicação em uma hierarquia de componentes.
 
 ### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
 
