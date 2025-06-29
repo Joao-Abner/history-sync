@@ -45,9 +45,9 @@
 
 ### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
 
-- [ ] **ID14:** Configurar rotas para diferentes partes da aplicação, permitindo a navegação entre páginas distintas.
-- [ ] **ID15:** Passar dados entre componentes que representam diferentes telas usando parâmetros de rotas.
-- [ ] **ID16:** Criar uma estrutura de navegação aninhada para representar hierarquias de conteúdo.
+- [x] **ID14:** Configurar rotas para diferentes partes da aplicação, permitindo a navegação entre páginas distintas.
+- [x] **ID15:** Passar dados entre componentes que representam diferentes telas usando parâmetros de rotas.
+- [x] **ID16:** Criar uma estrutura de navegação aninhada para representar hierarquias de conteúdo.
 - [ ] **ID17:** Aplicar guardas de rotas para controlar o acesso a rotas específicas da aplicação, assegurando que somente usuários autorizados possam acessar determinadas partes da interface.
 
 ### RA6 - Realizar requisições assíncronas para serviços web, compreendendo os protocolos e formatos de troca de dados, tratando respostas e erros.
