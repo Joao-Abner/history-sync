@@ -11,14 +11,6 @@ export class MyEventsPageComponent implements OnInit {
 
   constructor(private myEventService: MyEventService) { }
 
-  // async ngOnInit() {
-  //   try {
-  //     this.events = await this.myEventService.getEvents();
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // }
-
   ngOnInit(): void {
     this.myEventService.getEvents().subscribe({
       next: (data) => this.events = data,
