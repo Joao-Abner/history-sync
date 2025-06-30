@@ -41,7 +41,7 @@
 ### RA4 - Implementar comunicação eficaz entre componentes, utilizando padrões de comunicação e serviços para compartilhar lógica e dados.
 
 - [x] **ID12:** Criar comunicação entre componentes não relacionados hierarquicamente por meio de serviços através do mecanismo de injeção de dependência.
-- [x] **ID13:** Utilizar as diretivas @Input ou @Output para comunicação em uma hierarquia de componentes.
+- [ ] **ID13:** Utilizar as diretivas @Input ou @Output para comunicação em uma hierarquia de componentes.
 
 ### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
 
