@@ -36,7 +36,7 @@
 - [x] **ID8:** Aplicar técnicas de one-way data binding, como Interpolation e Property Binding, para exibir e atualizar dados na interface gráfica de maneira unidirecional.
 - [x] **ID9:** Aplicar técnicas de event binding para capturar eventos do usuário na interface e interagir com o modelo de dados.
 - [x] **ID10:** Aplicar técnicas de two-way data binding para criar uma sincronização bidirecional automática entre a interface e o modelo de dados.
-- [x] **ID11:** Usar variáveis de template para manipulação dinâmica dos dados na interface gráfica.
+- [ ] **ID11:** Usar variáveis de template para manipulação dinâmica dos dados na interface gráfica.
 
 ### RA4 - Implementar comunicação eficaz entre componentes, utilizando padrões de comunicação e serviços para compartilhar lógica e dados.
 
